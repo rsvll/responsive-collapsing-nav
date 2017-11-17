@@ -3,3 +3,89 @@
   margin: 0;
   padding: 0;
 }
+
+.main-nav{
+  display: flex;
+  min-height: 50px;
+  background: grey;
+  padding: 0 1rem;
+  align-items: center;/*centers withing vercical content*/
+  font-size: 1.5rem;
+}
+.hamburger-button{
+  display: none;
+  /*height: 50px;
+  width: 50px;*/
+}
+
+.main-nav-list{
+  display: flex;
+  list-style: none;
+  margin-left: auto; /*moves it to the far right*/
+}
+.main-nav-list li{
+  margin-left: 1rem;
+  text-align: center;
+}
+.main-nav a{
+ text-decoration: none;
+}
+
+@media (max-width: 600px){
+  .main-nav{
+    flex-wrap: wrap;
+  }
+  .hamburger-button{
+    display: block;
+    margin-left: auto;
+    background: transparent;
+    border: none;
+    width: 50px;
+    height: 50px;
+    position: relative; /*can position children by making it other than static */
+  }
+  .hamburger-button div{
+    height: 7px;
+    width: 50px;
+    background-color: #000;
+    position: absolute;
+    border-radius: 5px;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    transition: .25s;
+  }
+  .hamburger-button div:first-child {
+    top: 25%;
+  }
+  .hamburger-button div:nth-child(2){
+    top:50%;
+  }
+  .hamburger-button div:nth-child(3){
+    top: 75% ;
+  }
+
+  /*  hamburger-close*/
+  .hamburger-button.hamburger-close div:first-child{
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+  .hamburger-button.hamburger-close div:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger-button.hamburger-close div:nth-child(3){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .main-nav-list{
+    display: block;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    transition: .25s;
+  }
+  .main-nav-list.open {
+    max-height: 500px;
+  }
+}
+/*=====closes media query======*/
