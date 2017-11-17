@@ -3,11 +3,14 @@
   margin: 0;
   padding: 0;
 }
+body{
+  color: #e2c9ed;
+}
 
 .main-nav{
   display: flex;
   min-height: 50px;
-  background: grey;
+  background: #748aed;
   padding: 0 1rem;
   align-items: center;/*centers withing vercical content*/
   font-size: 1.5rem;
@@ -17,18 +20,25 @@
   /*height: 50px;
   width: 50px;*/
 }
+.menu{
+  padding-left: 1rem;
+  font-size: 1rem;
+}
 
 .main-nav-list{
   display: flex;
   list-style: none;
   margin-left: auto; /*moves it to the far right*/
+
 }
 .main-nav-list li{
   margin-left: 1rem;
   text-align: center;
+  color: #ca74ed;
 }
 .main-nav a{
  text-decoration: none;
+ color: #e2c9ed;
 }
 
 @media (max-width: 600px){
@@ -43,6 +53,7 @@
     width: 50px;
     height: 50px;
     position: relative; /*can position children by making it other than static */
+    outline: none;
   }
   .hamburger-button div{
     height: 7px;
