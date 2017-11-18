@@ -2,11 +2,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: red 1px solid;
 }
 body{
   color: #e2c9ed;
 }
-
+/*====== NAVIGATION =======*/
 .main-nav{
   display: flex;
   min-height: 50px;
@@ -14,6 +15,8 @@ body{
   padding: 0 1rem;
   align-items: center;/*centers withing vercical content*/
   font-size: 1.5rem;
+  position: fixed;
+  width: 100%;
 }
 .hamburger-button{
   display: none;
@@ -23,6 +26,7 @@ body{
 .menu{
   padding-left: 1rem;
   font-size: 1rem;
+  display: none;
 }
 
 .main-nav-list{
@@ -45,6 +49,7 @@ body{
   .main-nav{
     flex-wrap: wrap;
   }
+
   .hamburger-button{
     display: block;
     margin-left: auto;
@@ -87,6 +92,9 @@ body{
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
   }
+.menu{
+  display: block;
+}
 
   .main-nav-list{
     display: block;
@@ -100,3 +108,30 @@ body{
   }
 }
 /*=====closes media query======*/
+/* ==========nav ends ==========*/
+.main-header img{
+  width: 100%;
+
+}
+.row{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  opacity: .9;
+
+}
+.row > div {
+  flex: 1;
+  height: 300px;
+}
+.left{
+  background: #5a739b;
+}
+.right{
+  background: #b5b8bc;
+}
+.footer{
+  height: 100px;
+  width: 100%;
+  background: black;
+}
